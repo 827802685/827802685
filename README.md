@@ -1,18 +1,19 @@
+![](https://raw.githubusercontent.com/827802685/image/refs/heads/main/154DB82A990DF7E4C8C73C23261A9077.jpg)
+
 ## Hi there 👋
 
-> 🌍 正在用代码构建更好的数字世界 | [你的城市] • [你的国家]  
-> 💼 [你的职位，如：全栈开发工程师 / DevOps 工程师 / 学生]  
-> 📅 加入 GitHub 时间：[YYYY-MM-DD]  
+> 🌍 正在用代码构建更好的数字世界 | [香港] • [中国] 
+> 💼 [职位，如：全栈开发工程师 / DevOps 工程师 / 学生] 
+>
+> 📅 加入 GitHub 时间：[2024-02-08]  
 
 ---
 
 ## 🚀 关于我
 
-- 🔭 目前正在专注：**[当前项目或学习方向，如：微服务架构 / AI 应用开发 / 开源贡献]**  
+- 🔭 目前正在专注：**[当前学习方向：微服务架构 / AI 应用开发 / 开源贡献]**  
 - 🌱 正在学习：**[如：Rust / Kubernetes / Prompt Engineering]**  
-- 💬 喜欢讨论：**[如：系统设计 / 可持续软件开发 / 开发者工具链]**  
-- 📫 如何联系我：[邮箱] 或 [Twitter/Gmail/Telegram 等链接]  
-- ⚡ 有趣的事实：**[例如：我用 Vim 写代码 / 我每天写技术博客 / 我跑过半程马拉松]**
+- 📫 如何联系我：[[me@zjkl0426.dpdns.org](mailto:me@zjkl0426.dpdns.org)]   
 
 ---
 
@@ -45,10 +46,8 @@
 ---
 
 ## 📈 统计数据
-
-![你的 GitHub 统计图 - 可替换用户名]
-![GitHub Streak Stats](https://streak-stats.demolab.com?user=你的用户名&theme=dark&hide_border=true&border_radius=10)
-![GitHub Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=你的用户名&theme=dark&hide_border=true&layout=compact&langs_count=6)
+![GitHub Streak Stats](https://streak-stats.demolab.com?user=827802685&theme=dark&hide_border=true&border_radius=10)
+![GitHub Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=827802685&theme=dark&hide_border=true&layout=compact&langs_count=6)
 
 > 🔍 查看更多统计：[GitHub Readme Stats](https://github-readme-stats.vercel.app)
 
@@ -58,43 +57,30 @@
 
 ### 🏆 精选项目
 
-- 🔧 **[项目名称 1]** — [简短描述，如：一个基于 FastAPI 的 RESTful API 框架]  
-  [GitHub 链接](https://github.com/你的用户名/项目1) | 🛠 Python, FastAPI, PostgreSQL
+- 🔧 **[精美留言板 (Beautiful Message Board)]** — [一个现代化、交互友好的留言板系统，支持实时留言发布、头像预览、服务状态监控等功能]  
+  [GitHub 链接](https://github.com/827802685/Message-Board) | 🛠 html5,JavaScript, CSS 
 
-- 🎯 **[项目名称 2]** — [如：自动化部署工具，支持多环境 CI/CD]  
-  [GitHub 链接](https://github.com/你的用户名/项目2) | 🐳 Docker, GitHub Actions
-
-- 📊 **[项目名称 3]** — [如：数据可视化仪表盘，使用 React 和 D3.js]  
-  [GitHub 链接](https://github.com/你的用户名/项目3) | 🎨 React, D3.js, Tailwind CSS
-
-> 💡 更多项目请查看 [我的仓库](https://github.com/你的用户名?tab=repositories)
+> 💡 更多项目请查看 [我的仓库](https://github.com/827802685?tab=repositories)
 
 ---
 
 ## 📬 联系我
 
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:你的邮箱)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](zjkl@zjkl0426.dpdns.org)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/你的用户名)
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/你的用户名)
-[![个人网站](https://img.shields.io/badge/Website-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](https://你的网站.com)
+[![个人网站](https://img.shields.io/badge/Website-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](https://zjkl.qzz.io)
 
 ---
 
 ## 📜 开源贡献
-
-![你的 GitHub 贡献图]
-![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=你的用户名&theme=react-dark&hide_border=true&area=true)
-
-> ✅ 持续参与开源，欢迎一起协作！
+![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=827802685&theme=react-dark&hide_border=true&area=true)
 
 ---
 
 ## 🎯 目标
 
 - ✅ 每周至少提交一次有意义的代码  
-- ✅ 每月贡献一个开源项目  
-- ✅ 每季度发布一个完整项目  
-- ✅ 帮助 10+ 开发者解决问题
 
 ---
 
