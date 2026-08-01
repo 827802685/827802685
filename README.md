@@ -47,7 +47,7 @@
 
 ## 📈 统计数据
 ![GitHub Streak Stats](https://streak-stats.demolab.com?user=827802685&theme=dark&hide_border=true&border_radius=10)
-![GitHub Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=827802685&theme=dark&hide_border=true&layout=compact&langs_count=6)
+
 
 > 🔍 查看更多统计：[GitHub Readme Stats](https://github-readme-stats.vercel.app)
 
