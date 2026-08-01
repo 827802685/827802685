@@ -2,8 +2,8 @@
 
 ## Hi there 👋
 
-> 🌍 正在用代码构建更好的数字世界 | [香港] • [中国] 
-> 💼 [职位，如：全栈开发工程师 / DevOps 工程师 / 学生] 
+> 🌍 正在用代码构建更好的数字世界 | [江西] • [吉安] 
+> 💼 [职位，学生] 
 >
 > 📅 加入 GitHub 时间：[2024-02-08]  
 
@@ -12,7 +12,7 @@
 ## 🚀 关于我
 
 - 🔭 目前正在专注：**[当前学习方向：微服务架构 / AI 应用开发 / 开源贡献]**  
-- 🌱 正在学习：**[如：Rust / Kubernetes / Prompt Engineering]**  
+- 🌱 正在学习：**[Rust / Kubernetes / Prompt Engineering]**  
 - 📫 如何联系我：[[me@zjkl0426.dpdns.org](mailto:me@zjkl0426.dpdns.org)]   
 
 ---
