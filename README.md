@@ -16,6 +16,32 @@
 
 </div>
 
+## 🌐 在跑的服务
+
+> 这些不是仓库里的半成品，是**线上真实可访问**的实例。全部于 2026-10-07 逐个实测 HTTP 200。
+
+| 服务 | 地址 | 说明 |
+| :--- | :--- | :--- |
+| 🏠 **主页** | [zjkl.qzz.io](https://zjkl.qzz.io) | 个人门户 |
+| 📝 **博客** | [blog.zjkl.qzz.io](https://blog.zjkl.qzz.io) | Rin 边缘博客 · Workers + D1 + R2 |
+| 🔥 **新闻墙** | [news.zjkl.qzz.io](https://news.zjkl.qzz.io) | Hot-News · 15 分钟一轮采集 |
+| ☁️ **云盘 / 图床** | [clist.zjkl.dpdns.org](https://clist.zjkl.dpdns.org) | clist · 网盘 + 图床 + 存储聚合 |
+| 📮 **邮箱** | [mail.zjkl.qzz.io](https://mail.zjkl.qzz.io) | AI 分类摘要 + 验证码提取 + 全文搜索 |
+| 📡 **RSS** | [rss.zjkl.qzz.io](https://rss.zjkl.qzz.io) | 自建订阅源 |
+| 🖼 **图床** | [img.zjkl0330.dpdns.org](https://img.zjkl0330.dpdns.org) | Telegraph-Image |
+| 🔀 **LLM 路由** | [api.zjkl0330.dpdns.org](https://api.zjkl0330.dpdns.org) | freellmapi-cf v3.6.0 · 20 家提供商聚合 |
+| 🛰 **AI 网关控制台** | [api.zjkl.dpdns.org](https://api.zjkl.dpdns.org) | Octafuse Gateway · Admin |
+| 💬 **对话前端** | [chat.zjkl.dpdns.org](https://chat.zjkl.dpdns.org) | NextChat |
+| 📡 **模型雷达** | [rss.zjkl.dpdns.org](https://rss.zjkl.dpdns.org) | ModelRadar 控制台 |
+| 📊 **探活状态页** | [uptime.zjkl.dpdns.org](https://uptime.zjkl.dpdns.org) | UptimeFlare |
+| 🚀 **GitHub 加速** | [gh.zjkl0330.dpdns.org](https://gh.zjkl0330.dpdns.org) | Release 下载镜像 |
+| 🔑 **密码生成器** | [uuid.zjkl0426.dpdns.org](https://uuid.zjkl0426.dpdns.org) | 密码 & UUID |
+| 📺 **影视** | [tv.zjkl0426.dpdns.org](https://tv.zjkl0426.dpdns.org) | LibreTV |
+
+<sub>另有部分服务在 <code>*.zjkl0330.dpdns.org</code> 上跑着第二实例（clist、news 等）。</sub>
+
+<br/>
+
 ## 🔨 在做
 
 <table>
@@ -26,7 +52,7 @@
     </td>
     <td width="33%" align="center">
       <b>☁️ clist</b><br/>
-      <sub>网盘 / 图床 / 存储聚合，前后端分离</sub>
+      <sub>网盘 / 图床 / 存储聚合</sub>
     </td>
     <td width="33%" align="center">
       <b>⚡ mini-flow</b><br/>
@@ -58,9 +84,13 @@
 - 前端复用 n8n 官方 editor-ui（不改源码）
 - 决策写在 [`DECISIONS.md`](https://github.com/827802685/mini-flow/blob/main/DECISIONS.md)，带 tests 与 migrations
 
-### [cloud-api](https://github.com/827802685/cloud-api) — AI 网关 &nbsp;<img src="https://img.shields.io/badge/基于开源网关改造-3B82F6?style=flat-square" alt="based"/>
+### ☁️ clist — 网盘 / 图床 / 存储聚合 &nbsp;<img src="https://img.shields.io/badge/基于_CloudPaste-3B82F6?style=flat-square" alt="based"/>
 
-可自托管的 AI 网关：多供应商（OpenAI / Anthropic / Gemini）+ 多协议（Chat / Images / Audio）+ 四种路由策略（缓存亲和 / 加权随机 / 优先级主备 / 加权轮转）+ 三账本计费。Workers + D1 零成本部署，也可 Docker 自托管。
+线上 **[clist.zjkl.dpdns.org](https://clist.zjkl.dpdns.org)**（CloudPaste 界面），一个 Worker 同时干网盘、图床、多存储聚合三件事。
+
+以 [CloudPaste](https://github.com/ling-drag0n/CloudPaste) 为框架，整合了 [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) 的图床能力与 [Cloudflare-Clist](https://github.com/ooyyh/Cloudflare-Clist) 的网盘聚合，前端 + 后端 + Docker 三份部署形态。
+
+> **关于仓库**：私有工作仓 `clist-cf` 与公开镜像 **[cloud-drive](https://github.com/827802685/cloud-drive) 是同一套代码**（`package.json`、`frontend/package.json` 字节级一致，仅 `wrangler.toml` 部署参数不同）。前者是我提交的开发分支，后者带完整的上游历史，方便别人一键部署。
 
 ### [Rin](https://github.com/827802685/Rin) — 个人博客 &nbsp;<img src="https://img.shields.io/badge/fork_自_openRin/Rin-3B82F6?style=flat-square" alt="fork"/>
 
@@ -70,54 +100,39 @@ Fork 自 [openRin/Rin](https://github.com/openRin/Rin) 的边缘博客，之后 
 
 一个 Worker 同时承载 newsnow 卡片新闻墙 + 自建后台（订阅抓取 / 多源 / AI 翻译 / 企业微信推送 / 四时段定时）。线上 **[news.zjkl.qzz.io](https://news.zjkl.qzz.io)**，15 分钟一轮采集。
 
-### ☁️ clist — 网盘聚合 <img src="https://img.shields.io/badge/私有仓库-F6821F?style=flat-square" alt="private"/>
+### [cloud-api](https://github.com/827802685/cloud-api) — AI 网关 &nbsp;<img src="https://img.shields.io/badge/基于开源网关改造-3B82F6?style=flat-square" alt="based"/>
 
-前后端分离的云盘 / 图床 / 存储聚合系统，跑在 **[clist.zjkl.dpdns.org](https://clist.zjkl.dpdns.org)**。仓库私有，代码不公开。
+可自托管的 AI 网关：多供应商（OpenAI / Anthropic / Gemini）+ 多协议（Chat / Images / Audio / Agent Tools）+ 四种路由策略（缓存亲和 / 加权随机 / 优先级主备 / 加权轮转）+ 三账本计费。Workers + D1 零成本部署，也可 Docker + PostgreSQL 自托管。
 
 ---
 
-## 🧩 小工具
+## 🧩 自建工具
 
 | 项目 | 说明 |
 | :--- | :--- |
-| 🔑 **[Password-UUID-Generator](https://github.com/827802685/Password-UUID-Generator)** | 密码 & UUID 生成器，纯前端，线上 [uuid.zjkl0426.dpdns.org](https://uuid.zjkl0426.dpdns.org) |
-| 📡 **[ModelRadar](https://github.com/827802685/ModelRadar)** | 免费 AI 模型雷达：收录可用模型、额度与限速信息 |
-| 📮 **[personal-ai-mail](https://github.com/827802685/personal-ai-mail)** | 单用户 AI 邮件系统：AI 分类摘要、验证码提取、FTS5 中文全文搜索、11 个 MCP 工具 |
-| 🔀 **[freellmapi-cf](https://github.com/827802685/freellmapi-cf)** | 统一大模型 API 路由，聚合 19+ 家提供商，一个 endpoint 全搞定 |
+| 🔀 **[freellmapi-cf](https://github.com/827802685/freellmapi-cf)** | 统一 LLM 路由器，聚合 20 家提供商，一个 OpenAI 兼容端点全搞定。**线上 [api.zjkl0330.dpdns.org](https://api.zjkl0330.dpdns.org)**，v3.6.0 |
+| 📮 **[personal-ai-mail](https://github.com/827802685/personal-ai-mail)** | 单用户 AI 邮件系统：分类摘要、验证码提取、FTS5 中文全文搜索、11 个 MCP 工具。**线上 [mail.zjkl.qzz.io](https://mail.zjkl.qzz.io)** |
+| 📡 **[ModelRadar](https://github.com/827802685/ModelRadar)** | 免费 AI 模型雷达：收录可用模型、额度与限速。**线上 [rss.zjkl.dpdns.org](https://rss.zjkl.dpdns.org)** |
+| 🎬 **[extraction](https://github.com/827802685/extraction)** | 七大平台短视频 / 图集无水印解析：抖音、TikTok、快手、小红书、B 站、YouTube、Instagram。Worker Static Assets + Browser Rendering 无头浏览器兜底 |
+| 🔑 **[Password-UUID-Generator](https://github.com/827802685/Password-UUID-Generator)** | 密码 & UUID 生成器，纯前端。**线上 [uuid.zjkl0426.dpdns.org](https://uuid.zjkl0426.dpdns.org)** |
 | 🐒 **[tampermonkey](https://github.com/827802685/tampermonkey)** | 个人油猴脚本集合 |
 
 ---
 
 ## 🔧 基于上游部署
 
-> 这些是拿来自己跑、顺手改了点儿的，**不算作品**，列出来只是说明我在用什么。
+> 这些是拿来自己跑、顺手改了点儿的，列出来只是说明我在用什么。
 
-| 项目 | 上游 |
-| :--- | :--- |
-| 📦 [cloud-drive](https://github.com/827802685/cloud-drive) | CloudPaste（云盘聚合，我只补了审计日志） |
-| 🎭 [Live2D](https://github.com/827802685/Live2D) | live2d-widget（网页看板娘） |
-| 📈 [UptimeFlare](https://github.com/827802685/UptimeFlare) | uptime-flare（服务状态页） |
-| 🖼 [tg-img](https://github.com/827802685/tg-img) | x-dr/telegraph-Image（图床） |
-| 📋 [web-clipboard](https://github.com/827802685/web-clipboard) | yun8862779/web-clipboard |
+| 项目 | 上游 | 线上 |
+| :--- | :--- | :--- |
+| 📦 [cloud-drive](https://github.com/827802685/cloud-drive) | CloudPaste（与上面 clist 同一套代码的公开镜像） | [clist.zjkl.dpdns.org](https://clist.zjkl.dpdns.org) |
+| 🖼 [tg-img](https://github.com/827802685/tg-img) | x-dr/telegraph-Image | [img.zjkl0330.dpdns.org](https://img.zjkl0330.dpdns.org) |
+| 📈 [UptimeFlare](https://github.com/827802685/UptimeFlare) | uptime-flare | [uptime.zjkl.dpdns.org](https://uptime.zjkl.dpdns.org) |
+| 📺 [LibreTV](https://github.com/827802685/LibreTV) | LibreTV | [tv.zjkl0426.dpdns.org](https://tv.zjkl0426.dpdns.org) |
+| 🎭 [Live2D](https://github.com/827802685/Live2D) | live2d-widget | — |
+| 📋 [web-clipboard](https://github.com/827802685/web-clipboard) | yun8862779/web-clipboard | — |
 
-<sub>其余为纯 fork 自部署，如 newsnow、cloud-mail、Sink、LibreTV、MoonTV、SPlayer、TrendRadar、galaxy 等，不再逐一列出。</sub>
-
-<br/>
-
-## 🌐 在跑的服务
-
-<table>
-  <tr>
-    <td width="33%" align="center">📝<br/><a href="https://blog.zjkl.qzz.io"><b>博客</b></a><br/><sub>Rin · Workers + D1 + R2</sub></td>
-    <td width="33%" align="center">🏠<br/><a href="https://zjkl.qzz.io"><b>主页</b></a><br/><sub>zjkl.qzz.io</sub></td>
-    <td width="33%" align="center">🔥<br/><a href="https://news.zjkl.qzz.io"><b>新闻墙</b></a><br/><sub>Hot-News · 15 分钟一轮</sub></td>
-  </tr>
-  <tr>
-    <td width="33%" align="center">☁️<br/><a href="https://clist.zjkl.dpdns.org"><b>云盘列表</b></a><br/><sub>clist 网盘聚合</sub></td>
-    <td width="33%" align="center">🚀<br/><a href="https://gh.zjkl0330.dpdns.org"><b>GitHub 加速</b></a><br/><sub>Release 下载镜像</sub></td>
-    <td width="33%" align="center">🔑<br/><a href="https://uuid.zjkl0426.dpdns.org"><b>密码生成器</b></a><br/><sub>密码 &amp; UUID</sub></td>
-  </tr>
-</table>
+<sub>其余为纯 fork 自部署，如 newsnow、cloud-mail、Sink、MoonTV、SPlayer、TrendRadar、galaxy 等，不再逐一列出。</sub>
 
 <br/>
 
@@ -136,6 +151,7 @@ Fork 自 [openRin/Rin](https://github.com/openRin/Rin) 的边缘博客，之后 
 ![D1](https://img.shields.io/badge/D1-0B1020?style=for-the-badge&logo=cloudflare&logoColor=F38020)
 ![KV](https://img.shields.io/badge/KV-0B1020?style=for-the-badge&logo=cloudflare&logoColor=F38020)
 ![Durable Objects](https://img.shields.io/badge/Durable_Objects-0B1020?style=for-the-badge&logo=cloudflare&logoColor=F38020)
+![R2](https://img.shields.io/badge/R2-0B1020?style=for-the-badge&logo=cloudflare&logoColor=F38020)
 ![Hono](https://img.shields.io/badge/Hono-E36002?style=for-the-badge&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
@@ -144,7 +160,7 @@ Fork 自 [openRin/Rin](https://github.com/openRin/Rin) 的边缘博客，之后 
 ![Vue](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?style=for-the-badge&logo=nuxtdotjs&logoColor=white)
 
 **工具**
 
