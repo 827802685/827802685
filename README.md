@@ -101,12 +101,35 @@
 
 ## 🛠 技术栈
 
-<p>
-<b>语言</b> &nbsp;<kbd>TypeScript</kbd> <kbd>JavaScript</kbd> <kbd>Python</kbd><br/>
-<b>平台</b> &nbsp;<kbd>Cloudflare Workers</kbd> <kbd>D1</kbd> <kbd>KV</kbd> <kbd>Durable Objects</kbd> <kbd>Workflows</kbd> <kbd>R2</kbd> <kbd>Hono</kbd> <kbd>Node.js</kbd><br/>
-<b>前端</b> &nbsp;<kbd>Vue</kbd> <kbd>React</kbd> <kbd>Next.js</kbd> <kbd>Tailwind CSS</kbd><br/>
-<b>其他</b> &nbsp;<kbd>Docker</kbd> <kbd>Cloudflare Pages</kbd> <kbd>MCP</kbd> <kbd>Tampermonkey</kbd>
-</p>
+**语言**
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+**Cloudflare 全家桶**
+
+![Workers](https://img.shields.io/badge/Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+![D1](https://img.shields.io/badge/D1-0B1020?style=for-the-badge&logo=cloudflare&logoColor=F38020)
+![KV](https://img.shields.io/badge/KV-0B1020?style=for-the-badge&logo=cloudflare&logoColor=F38020)
+![Durable Objects](https://img.shields.io/badge/Durable_Objects-0B1020?style=for-the-badge&logo=cloudflare&logoColor=F38020)
+![Hono](https://img.shields.io/badge/Hono-E36002?style=for-the-badge&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+
+**前端**
+
+![Vue](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+**工具**
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Pages](https://img.shields.io/badge/Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+![Tampermonkey](https://img.shields.io/badge/Tampermonkey-800000?style=for-the-badge&logo=tampermonkey&logoColor=white)
 
 <br/>
 
@@ -114,35 +137,32 @@
 
 <div align="center">
 
-**总览 · 语言 · 节奏，全暗色，和顶部 banner 一个色系。**
-
 <table>
   <tr>
-    <td width="50%" align="center">
-      <img src="https://github-profile-summary-cards.vercel.app/api/profile-details?username=827802685&theme=github-dark" alt="profile details" width="100%" />
+    <td align="center" width="50%">
+      <img src="https://img.shields.io/github/followers/827802685?style=for-the-badge&label=Followers&color=F6821F&logo=github&logoColor=white" alt="followers" />
     </td>
-    <td width="50%" align="center">
-      <img src="https://github-profile-summary-cards.vercel.app/api/repos-per-language?username=827802685&theme=github-dark" alt="repos per language" width="100%" />
+    <td align="center" width="50%">
+      <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Repos&color=3178C6&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2F827802685" alt="repos" />
     </td>
   </tr>
   <tr>
-    <td width="50%" align="center">
-      <img src="https://github-profile-summary-cards.vercel.app/api/productive-time?username=827802685&theme=github-dark" alt="productive time" width="100%" />
+    <td align="center" width="50%">
+      <img src="https://img.shields.io/github/stars/827802685?style=for-the-badge&label=Stars&color=F7DF1E" alt="stars" />
     </td>
-    <td width="50%" align="center">
-      <img src="https://github-profile-summary-cards.vercel.app/api/stats?username=827802685&theme=github-dark" alt="stats" width="100%" />
+    <td align="center" width="50%">
+      <img src="https://img.shields.io/badge/On_GitHub-since_2024--02--08-22C55E?style=for-the-badge&logo=github&logoColor=white" alt="since" />
     </td>
   </tr>
 </table>
 
 <br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=827802685&theme=github-dark&hide_border=true&area=true&bg_color=1D2B4D&color=9FB3D1&line=F6821F&point=FFB86B" alt="activity graph" width="100%" />
+<img src="assets/langs.svg" width="100%" alt="language breakdown" />
 
 <br/>
 
-<img height="165" src="https://streak-stats.demolab.com?user=827802685&hide_border=true&border_radius=10&locale=zh_Hans&theme=dark" alt="streak" />
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=827802685&show_icons=true&hide_border=false&border_radius=10&bg_color=1D2B4D&border_color=2B3A5C&title_color=F6821F&icon_color=F6821F&text_color=CBD5E1" alt="stats" />
+<img src="https://streak-stats.demolab.com?user=827802685&hide_border=true&border_radius=10&locale=zh_Hans&theme=dark" alt="streak" />
 
 </div>
 
