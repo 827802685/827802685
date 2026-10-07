@@ -16,33 +16,32 @@
 
 </div>
 
-## 🔨 Now
+## 🔨 在做
 
 <table>
   <tr>
     <td width="33%" align="center">
       <b>🧠 牛马工作室</b><br/>
-      <sub>AI 拆任务 · 派活 · 盯进度 · 验收返工</sub>
+      <sub>一个进程里的 AI 编排层 + Job 状态层</sub>
+    </td>
+    <td width="33%" align="center">
+      <b>☁️ clist</b><br/>
+      <sub>网盘 / 图床 / 存储聚合，前后端分离</sub>
     </td>
     <td width="33%" align="center">
       <b>⚡ mini-flow</b><br/>
       <sub>n8n 工作流引擎搬到 Cloudflare Workers</sub>
-    </td>
-    <td width="33%" align="center">
-      <b>🌉 cloud-api</b><br/>
-      <sub>多供应商 AI 网关 · 路由策略 · 计费</sub>
     </td>
   </tr>
 </table>
 
 <br/>
 
-## 🧠 自己写的
+## 🚀 主力项目
 
-> 架构、代码、决策文档都是自己的，没套壳。
+> 持续投入、有自己架构的那几个。
 
-<details open>
-<summary><b>▸ <a href="https://github.com/827802685/job">job</a> — 牛马工作室 &nbsp;<img src="https://img.shields.io/badge/状态-开发中可用-22C55E?style=flat-square" alt="status"/></b></summary>
+### [job](https://github.com/827802685/job) — 牛马工作室 &nbsp;<img src="https://img.shields.io/badge/全部自研-22C55E?style=flat-square" alt="self"/>
 
 一个进程、一个端口、一套网页，把两件事合在一起：
 
@@ -51,34 +50,57 @@
 
 带彩排模式：`npm run rehearsal` —— 假员工演一遍，不花钱、不改文件。
 
-</details>
-
-<details open>
-<summary><b>▸ <a href="https://github.com/827802685/mini-flow">mini-flow</a> — n8n 的边缘版 &nbsp;<img src="https://img.shields.io/badge/状态-可用·持续推进-3B82F6?style=flat-square" alt="status"/></b></summary>
+### [mini-flow](https://github.com/827802685/mini-flow) — n8n 的边缘版 &nbsp;<img src="https://img.shields.io/badge/后端自研-22C55E?style=flat-square" alt="self"/>
 
 把 n8n 的可视化编排 + 节点执行原生化搬到 Cloudflare Workers，内置防丢失与中断恢复：**检查点、幂等重试、死信队列、防重叠锁**。
 
-- 前端 **100% 复用 n8n editor-ui**（不改源码）
 - 后端在 Workers 上**自己复刻** n8n 的 REST 契约 + Push(SSE) 协议：Hono 组装，D1 存状态、KV 存凭据、Durable Object 转 SSE、Workflows 断点续跑
-- 决策全部写在 [`DECISIONS.md`](https://github.com/827802685/mini-flow/blob/main/DECISIONS.md)，带 tests 与 migrations
+- 前端复用 n8n 官方 editor-ui（不改源码）
+- 决策写在 [`DECISIONS.md`](https://github.com/827802685/mini-flow/blob/main/DECISIONS.md)，带 tests 与 migrations
 
-</details>
+### [cloud-api](https://github.com/827802685/cloud-api) — AI 网关 &nbsp;<img src="https://img.shields.io/badge/基于开源网关改造-3B82F6?style=flat-square" alt="based"/>
 
-<br/>
+可自托管的 AI 网关：多供应商（OpenAI / Anthropic / Gemini）+ 多协议（Chat / Images / Audio）+ 四种路由策略（缓存亲和 / 加权随机 / 优先级主备 / 加权轮转）+ 三账本计费。Workers + D1 零成本部署，也可 Docker 自托管。
 
-## 🔧 拿别人的改的
+### [Rin](https://github.com/827802685/Rin) — 个人博客 &nbsp;<img src="https://img.shields.io/badge/fork_自_openRin/Rin-3B82F6?style=flat-square" alt="fork"/>
 
-> 都真部署、真在跑，但不是从零写的，别误会。
+Fork 自 [openRin/Rin](https://github.com/openRin/Rin) 的边缘博客，之后 40+ 次提交按自己的需求改。线上跑在 **[blog.zjkl.qzz.io](https://blog.zjkl.qzz.io)**（Workers + D1 + R2）。
 
-| 项目 | 上游 | 我改了什么 |
-| :--- | :--- | :--- |
-| 🐙 **[cloud-api](https://github.com/827802685/cloud-api)** | 开源 AI 网关 | 多供应商（OpenAI / Anthropic / Gemini）+ 多协议 + hash_affinity 等路由策略 + 三账本计费；Workers + D1 零成本部署，也可 Docker 自托管 |
-| 📦 **[cloud-drive](https://github.com/827802685/cloud-drive)** | CloudPaste | 云盘聚合，接阿里云盘 / 百度网盘等驱动，补了审计日志 |
-| 📰 **[Hot-News](https://github.com/827802685/Hot-News)** | newsnow | 一个 Worker 同时跑新闻墙 + 自建后台（订阅抓取 / AI 翻译 / 企业微信推送 / 四时段定时） |
-| 📮 **[personal-ai-mail](https://github.com/827802685/personal-ai-mail)** | cloud-mail / mails-mcp | AI 分类摘要、验证码提取、FTS5 中文全文搜索、11 个 MCP 工具、R2 存附件 |
-| 🔀 **[freellmapi-cf](https://github.com/827802685/freellmapi-cf)** | freellmapi | 统一大模型 API 路由搬到 Workers，聚合 19+ 家提供商 |
+### [Hot-News](https://github.com/827802685/Hot-News) — 新闻聚合 &nbsp;<img src="https://img.shields.io/badge/整合_newsnow-3B82F6?style=flat-square" alt="based"/>
 
-<sub>其余仓库（Rin、UptimeFlare、tg-img、Live2D、MoonTV、LibreTV 等）基本是 fork 过来自己部署着用，不算作品。</sub>
+一个 Worker 同时承载 newsnow 卡片新闻墙 + 自建后台（订阅抓取 / 多源 / AI 翻译 / 企业微信推送 / 四时段定时）。线上 **[news.zjkl.qzz.io](https://news.zjkl.qzz.io)**，15 分钟一轮采集。
+
+### ☁️ clist — 网盘聚合 <img src="https://img.shields.io/badge/私有仓库-F6821F?style=flat-square" alt="private"/>
+
+前后端分离的云盘 / 图床 / 存储聚合系统，跑在 **[clist.zjkl.dpdns.org](https://clist.zjkl.dpdns.org)**。仓库私有，代码不公开。
+
+---
+
+## 🧩 小工具
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 🔑 **[Password-UUID-Generator](https://github.com/827802685/Password-UUID-Generator)** | 密码 & UUID 生成器，纯前端，线上 [uuid.zjkl0426.dpdns.org](https://uuid.zjkl0426.dpdns.org) |
+| 📡 **[ModelRadar](https://github.com/827802685/ModelRadar)** | 免费 AI 模型雷达：收录可用模型、额度与限速信息 |
+| 📮 **[personal-ai-mail](https://github.com/827802685/personal-ai-mail)** | 单用户 AI 邮件系统：AI 分类摘要、验证码提取、FTS5 中文全文搜索、11 个 MCP 工具 |
+| 🔀 **[freellmapi-cf](https://github.com/827802685/freellmapi-cf)** | 统一大模型 API 路由，聚合 19+ 家提供商，一个 endpoint 全搞定 |
+| 🐒 **[tampermonkey](https://github.com/827802685/tampermonkey)** | 个人油猴脚本集合 |
+
+---
+
+## 🔧 基于上游部署
+
+> 这些是拿来自己跑、顺手改了点儿的，**不算作品**，列出来只是说明我在用什么。
+
+| 项目 | 上游 |
+| :--- | :--- |
+| 📦 [cloud-drive](https://github.com/827802685/cloud-drive) | CloudPaste（云盘聚合，我只补了审计日志） |
+| 🎭 [Live2D](https://github.com/827802685/Live2D) | live2d-widget（网页看板娘） |
+| 📈 [UptimeFlare](https://github.com/827802685/UptimeFlare) | uptime-flare（服务状态页） |
+| 🖼 [tg-img](https://github.com/827802685/tg-img) | x-dr/telegraph-Image（图床） |
+| 📋 [web-clipboard](https://github.com/827802685/web-clipboard) | yun8862779/web-clipboard |
+
+<sub>其余为纯 fork 自部署，如 newsnow、cloud-mail、Sink、LibreTV、MoonTV、SPlayer、TrendRadar、galaxy 等，不再逐一列出。</sub>
 
 <br/>
 
@@ -86,12 +108,12 @@
 
 <table>
   <tr>
-    <td width="33%" align="center">📝<br/><a href="https://blog.zjkl.qzz.io"><b>博客</b></a><br/><sub>Workers + D1 + R2</sub></td>
+    <td width="33%" align="center">📝<br/><a href="https://blog.zjkl.qzz.io"><b>博客</b></a><br/><sub>Rin · Workers + D1 + R2</sub></td>
     <td width="33%" align="center">🏠<br/><a href="https://zjkl.qzz.io"><b>主页</b></a><br/><sub>zjkl.qzz.io</sub></td>
-    <td width="33%" align="center">🔥<br/><a href="https://news.zjkl.qzz.io"><b>新闻墙</b></a><br/><sub>15 分钟一轮采集</sub></td>
+    <td width="33%" align="center">🔥<br/><a href="https://news.zjkl.qzz.io"><b>新闻墙</b></a><br/><sub>Hot-News · 15 分钟一轮</sub></td>
   </tr>
   <tr>
-    <td width="33%" align="center">☁️<br/><a href="https://clist.zjkl.dpdns.org"><b>云盘列表</b></a><br/><sub>网盘资源聚合</sub></td>
+    <td width="33%" align="center">☁️<br/><a href="https://clist.zjkl.dpdns.org"><b>云盘列表</b></a><br/><sub>clist 网盘聚合</sub></td>
     <td width="33%" align="center">🚀<br/><a href="https://gh.zjkl0330.dpdns.org"><b>GitHub 加速</b></a><br/><sub>Release 下载镜像</sub></td>
     <td width="33%" align="center">🔑<br/><a href="https://uuid.zjkl0426.dpdns.org"><b>密码生成器</b></a><br/><sub>密码 &amp; UUID</sub></td>
   </tr>
