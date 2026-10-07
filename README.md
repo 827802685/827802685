@@ -18,27 +18,49 @@
 
 ## 🌐 在跑的服务
 
-> 这些不是仓库里的半成品，是**线上真实可访问**的实例。全部于 2026-10-07 逐个实测 HTTP 200。
+> 不是仓库里的半成品，是**线上真实可访问**的实例。清单以自建探活页 [uptime.zjkl.dpdns.org](https://uptime.zjkl.dpdns.org) 的配置为准，2026-10-07 逐个复核。
+
+**核心服务**
 
 | 服务 | 地址 | 说明 |
 | :--- | :--- | :--- |
 | 🏠 **主页** | [zjkl.qzz.io](https://zjkl.qzz.io) | 个人门户 |
 | 📝 **博客** | [blog.zjkl.qzz.io](https://blog.zjkl.qzz.io) | Rin 边缘博客 · Workers + D1 + R2 |
-| 🔥 **新闻墙** | [news.zjkl.qzz.io](https://news.zjkl.qzz.io) | Hot-News · 15 分钟一轮采集 |
-| ☁️ **云盘 / 图床** | [clist.zjkl.dpdns.org](https://clist.zjkl.dpdns.org) | clist · 网盘 + 图床 + 存储聚合 |
-| 📮 **邮箱** | [mail.zjkl.qzz.io](https://mail.zjkl.qzz.io) | AI 分类摘要 + 验证码提取 + 全文搜索 |
+| 🔥 **新闻墙** | [news.zjkl.qzz.io](https://news.zjkl.qzz.io) · [镜像](https://news.zjkl0330.dpdns.org) | Hot-News · 15 分钟一轮采集 |
+| ☁️ **云盘 / 图床** | [clist.zjkl.dpdns.org](https://clist.zjkl.dpdns.org) · [镜像](https://clist.zjkl0330.dpdns.org) | clist · 网盘 + 图床 + 存储聚合 |
+| 📮 **邮箱** | [mail.zjkl.qzz.io](https://mail.zjkl.qzz.io) | Cloud Mail · AI 分类摘要 + 验证码提取 + 全文搜索 |
 | 📡 **RSS** | [rss.zjkl.qzz.io](https://rss.zjkl.qzz.io) | 自建订阅源 |
-| 🖼 **图床** | [img.zjkl0330.dpdns.org](https://img.zjkl0330.dpdns.org) | Telegraph-Image |
-| 🔀 **LLM 路由** | [api.zjkl0330.dpdns.org](https://api.zjkl0330.dpdns.org) | freellmapi-cf v3.6.0 · 20 家提供商聚合 |
-| 🛰 **AI 网关控制台** | [api.zjkl.dpdns.org](https://api.zjkl.dpdns.org) | Octafuse Gateway · Admin |
-| 💬 **对话前端** | [chat.zjkl.dpdns.org](https://chat.zjkl.dpdns.org) | NextChat |
-| 📡 **模型雷达** | [rss.zjkl.dpdns.org](https://rss.zjkl.dpdns.org) | ModelRadar 控制台 |
-| 📊 **探活状态页** | [uptime.zjkl.dpdns.org](https://uptime.zjkl.dpdns.org) | UptimeFlare |
-| 🚀 **GitHub 加速** | [gh.zjkl0330.dpdns.org](https://gh.zjkl0330.dpdns.org) | Release 下载镜像 |
-| 🔑 **密码生成器** | [uuid.zjkl0426.dpdns.org](https://uuid.zjkl0426.dpdns.org) | 密码 & UUID |
-| 📺 **影视** | [tv.zjkl0426.dpdns.org](https://tv.zjkl0426.dpdns.org) | LibreTV |
+| 🔀 **免费模型** | [api.zjkl0330.dpdns.org](https://api.zjkl0330.dpdns.org) | freellmapi-cf v3.6.0 · 20 家提供商聚合 |
+| 📡 **模型雷达** | [rss.zjkl.dpdns.org](https://rss.zjkl.dpdns.org) | ModelRadar |
+| 🛰 **AI 网关** | [api.zjkl.dpdns.org](https://api.zjkl.dpdns.org) | 网关控制台 |
+| 💬 **Chat** | [chat.zjkl.dpdns.org](https://chat.zjkl.dpdns.org) | NextChat |
+| 📊 **探活** | [uptime](https://uptime.zjkl.dpdns.org) · [status](https://status.zjkl.dpdns.org) | UptimeFlare 双实例 |
 
-<sub>另有部分服务在 <code>*.zjkl0330.dpdns.org</code> 上跑着第二实例（clist、news 等）。</sub>
+**工具**
+
+| 服务 | 地址 | 说明 |
+| :--- | :--- | :--- |
+| 🔗 **短链** | [zjkl0330.dpdns.org](https://zjkl0330.dpdns.org) | Sink |
+| 📋 **在线剪贴板** | [jtb.zjkl0716.dpdns.org](https://jtb.zjkl0716.dpdns.org) | 登录制 |
+| 🎬 **视频解析** | [video.zjkl.dpdns.org](https://video.zjkl.dpdns.org) | 多平台去水印下载 |
+| 🔑 **UUID 生成器** | [uuid.zjkl0426.dpdns.org](https://uuid.zjkl0426.dpdns.org) | 密码 & UUID |
+| 📍 **地址生成器** | [rag.zjkl0330.dpdns.org](https://rag.zjkl0330.dpdns.org) | 真实地址生成 |
+| 🖼 **图床** | [img.zjkl0330.dpdns.org](https://img.zjkl0330.dpdns.org) | Telegraph-Image |
+| 🚀 **GitHub 加速** | [gh.zjkl0330.dpdns.org](https://gh.zjkl0330.dpdns.org) | Release 下载镜像 |
+
+**玩物**
+
+| 服务 | 地址 | 说明 |
+| :--- | :--- | :--- |
+| 📺 **TV** | [tv.zjkl0426.dpdns.org](https://tv.zjkl0426.dpdns.org) | LibreTV |
+| 📺 **电视** | [moon.zjkl.dpdns.org](https://moon.zjkl.dpdns.org) | MoonTV |
+| 🐍 **贪吃蛇** | [tcs.zjkl0330.dpdns.org](https://tcs.zjkl0330.dpdns.org) | — |
+| 🔢 **魔法数独** | [magic-sudoku.pages.dev](https://magic-sudoku.pages.dev) | — |
+| 🌀 **黑塔转圈圈** | [htzq.zjkl0330.dpdns.org](https://htzq.zjkl0330.dpdns.org) | — |
+| 🎮 **红警** | ra2web.827802685.workers.dev | ⚠️ 探活显示 404 |
+| 🎵 **SPlayer** | splayer-5r2.pages.dev | ⚠️ 探活显示 530 |
+
+<sub>域名族：<code>*.zjkl.qzz.io</code> · <code>*.zjkl.dpdns.org</code> · <code>*.zjkl0330.dpdns.org</code> · <code>*.zjkl0426.dpdns.org</code> · <code>*.zjkl0716.dpdns.org</code>；另有小号 <code>zjkl0501</code> 承载博客与邮件。</sub>
 
 <br/>
 
