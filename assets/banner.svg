@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" role="img" aria-label="zjkl banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1020"/>
+      <stop offset="55%" stop-color="#141F38"/>
+      <stop offset="100%" stop-color="#1D2B4D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F6821F"/>
+      <stop offset="100%" stop-color="#FFB86B"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F6821F" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#5B8DEF" stop-opacity="0.45"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B8DEF" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.22"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#F6821F" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#F6821F" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#FFFFFF" fill-opacity="0.10"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="260" fill="url(#bg)"/>
+  <rect width="900" height="260" fill="url(#dots)"/>
+  <circle cx="760" cy="60" r="170" fill="url(#glow)"/>
+
+  <!-- 右下装饰圆环 -->
+  <g fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.2">
+    <circle cx="742" cy="126" r="62"/>
+    <circle cx="742" cy="126" r="88"/>
+    <circle cx="742" cy="126" r="114"/>
+  </g>
+
+  <!-- 底部波浪 -->
+  <path d="M0,206 C120,178 210,236 330,214 C450,192 540,150 660,178 C760,201 830,224 900,204 L900,260 L0,260 Z" fill="url(#wave2)"/>
+  <path d="M0,222 C130,200 220,250 350,230 C470,211 570,182 690,204 C790,223 850,238 900,224 L900,260 L0,260 Z" fill="url(#wave1)"/>
+
+  <!-- 左侧竖条 -->
+  <rect x="56" y="82" width="5" height="86" rx="2.5" fill="url(#accent)"/>
+
+  <!-- 文字 -->
+  <text x="80" y="112" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="52" font-weight="700" fill="#FFFFFF" letter-spacing="1">zjkl</text>
+  <text x="80" y="146" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="19" font-weight="500" fill="#F6821F">高中生 · 自学 · 写代码</text>
+  <text x="80" y="174" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#9FB3D1">Cloudflare 边缘服务 &amp; 本地 AI 编排</text>
+
+  <!-- 右侧标签 -->
+  <g font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13">
+    <rect x="640" y="96" width="150" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.16"/>
+    <text x="715" y="116" text-anchor="middle" fill="#CBD5E1">since 2024</text>
+    <rect x="640" y="136" width="150" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.16"/>
+    <text x="715" y="156" text-anchor="middle" fill="#CBD5E1">江西 · 吉安</text>
+  </g>
+</svg>
