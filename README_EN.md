@@ -1,14 +1,12 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="100%" alt="zjkl" />
+<img src="assets/banner-en.svg" width="100%" alt="zjkl" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&pause=1000&color=F6821F&center=true&vCenter=true&width=620&lines=Cloudflare+Workers;AI+Agent+Orchestration;Self-hosted+Services" alt="typing" />
 
 <br/>
 
 **High-school student, self-taught. Two tracks: services running on the Cloudflare edge, and a local system that orchestrates AI coding agents.**
-
-Every project below is reachable online. Label conventions: **Original** = I wrote the code; **Adapted** = built on an upstream project, which I name; **Deployed** = someone else's project that I run, no originality claimed; **Archived** = I no longer maintain the repo or its service.
 
 [![Blog](https://img.shields.io/badge/Blog-blog.zjkl.qzz.io-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://blog.zjkl.qzz.io)
 [![GitHub](https://img.shields.io/badge/GitHub-827802685-181717?style=flat-square&logo=github)](https://github.com/827802685)
@@ -19,27 +17,47 @@ Every project below is reachable online. Label conventions: **Original** = I wro
 
 </div>
 
+Every project below is reachable online. Label conventions:
+
+| `Original` | `Adapted` | `Deployed` | `Archived` |
+| :---: | :---: | :---: | :---: |
+| I wrote the code | built on an upstream project, which I name | someone else's project that I run, no originality claimed | I no longer maintain the repo or its service |
+
+<br/>
+
 ## 🚀 Featured projects
 
-**🧠 [job](https://github.com/827802685/job) — Studio + Job state layer, merged into one process** &nbsp;`Studio subsystem adapted from Leeeger1/niuma-studio (MIT); Job state layer original`
+### 🧠 [job](https://github.com/827802685/job) — Studio + Job state layer, merged into one process
+
+<sub>Studio subsystem adapted from Leeeger1/niuma-studio (MIT); Job state layer original</sub>
 
 The studio half follows the upstream orchestration model: you talk to a single coordinator, she decomposes the task into a "project group × worker" grid — a project group is one model backend (Claude Code / Codex / OpenCode / Qoder / Trae / DeepSeek CLI, or any OpenAI-compatible endpoint), a worker is one skill file — and a rehearsal mode runs the whole flow with mock agents, spending no API quota and touching no files. What I did was merge and rework it: the original two-process, two-console layout became a single process on a single port, with the `bin/niuma.js` entry point, the config format and the console page all rewritten. The original part is the Job state layer mounted on the `/job/*` routes of that same process: intent routing → tiered permission decisions (deny unless granted) → execution leases → multiple validation gates → audit records → work orders, driven from the "butler" panel on the home page.
 
-**⚡ [mini-flow](https://github.com/827802685/mini-flow) — A lightweight workflow engine on Workers** &nbsp;`Backend original, frontend reuses n8n editor-ui`
+### ⚡ [mini-flow](https://github.com/827802685/mini-flow) — A lightweight workflow engine on Workers
+
+<sub>Backend original, frontend reuses n8n editor-ui</sub>
 
 I implemented the REST API and the Push (SSE) protocol against n8n's node model myself, so the official editor-ui works as the canvas without modification. Storage is layered: D1 holds run state, KV holds credentials, a Durable Object relays SSE, and Workflows provides resumable execution; the runtime ships with checkpoints, idempotent retries, a dead-letter queue and overlap locks. Rationale lives in [`DECISIONS.md`](https://github.com/827802685/mini-flow/blob/main/DECISIONS.md).
 
-**☁️ [clist](https://clist.zjkl.dpdns.org) — Drive listing / image bed / object-storage aggregation** &nbsp;`Adapted, built on CloudPaste`
+### ☁️ [clist](https://clist.zjkl.dpdns.org) — Drive listing / image bed / object-storage aggregation
+
+<sub>Adapted, built on CloudPaste</sub>
 
 CloudPaste as the base, merging CloudFlare-ImgBed's image-hosting capability with Cloudflare-Clist's multi-drive aggregation, so one Worker serves all three, up long-term. Development happens in the private `clist-cf` repo; the public mirror [cloud-drive](https://github.com/827802685/cloud-drive) is the same codebase (`package.json` identical, only deployment parameters differ).
 
-**🔀 [freellmapi-cf](https://github.com/827802685/freellmapi-cf) — Free-model router** &nbsp;`Archived`
+### 🔀 [freellmapi-cf](https://github.com/827802685/freellmapi-cf) — Free-model router
+
+<sub>Archived</sub>
 
 Used to pool the free tiers of roughly 20 providers behind a single OpenAI-compatible endpoint, dispatching by availability with failover, up to v3.6.0. I no longer maintain this repo; the historical address **[api.zjkl0330.dpdns.org](https://api.zjkl0330.dpdns.org)** stays listed as an archive with no availability guarantee.
 
-**📮 [personal-ai-mail](https://github.com/827802685/personal-ai-mail) — Single-user AI mail system** &nbsp;`Adapted, core framework from maillab/cloud-mail`
+### 📮 [personal-ai-mail](https://github.com/827802685/personal-ai-mail) — Single-user AI mail system
+
+<sub>Adapted, core framework from maillab/cloud-mail</sub>
 
 On top of cloud-mail's receiving and storage skeleton I wrote verification-code extraction, FTS5 full-text search for Chinese, and 11 MCP tools for agents to call. Live at **[mail.zjkl.qzz.io](https://mail.zjkl.qzz.io)**.
+
+<br/>
 
 <sub>
 **Also written by me**: **hot-news** (trending-news aggregation + RSS + multi-channel push Worker — the news wall below), **extraction** (watermark-free short-video and image parsing for 7 platforms), **Password-UUID-Generator**, **web-clipboard**, the **tampermonkey** script collection, **domain-alert** (the uptime config kept in this repo).<br/>
@@ -72,18 +90,24 @@ On top of cloud-mail's receiving and storage skeleton I wrote verification-code 
 
 ## 🛠 Tech stack
 
+<sub>Language</sub>
+
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-<br/>
+
+<sub>Edge · Cloudflare</sub>
+
 ![Workers](https://img.shields.io/badge/Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 ![D1](https://img.shields.io/badge/D1-0B1020?style=flat-square&logo=cloudflare&logoColor=F38020)
 ![KV](https://img.shields.io/badge/KV-0B1020?style=flat-square&logo=cloudflare&logoColor=F38020)
 ![Durable Objects](https://img.shields.io/badge/Durable_Objects-0B1020?style=flat-square&logo=cloudflare&logoColor=F38020)
 ![R2](https://img.shields.io/badge/R2-0B1020?style=flat-square&logo=cloudflare&logoColor=F38020)
 ![Hono](https://img.shields.io/badge/Hono-E36002?style=flat-square&logoColor=white)
-<br/>
+
+<sub>Frontend · Tooling</sub>
+
 ![Vue](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?style=flat-square&logo=nuxtdotjs&logoColor=white)
@@ -103,7 +127,7 @@ On top of cloud-mail's receiving and storage skeleton I wrote verification-code 
 
 <br/><br/>
 
-<img src="assets/langs.svg" width="100%" alt="language breakdown" />
+<img src="assets/langs-en.svg" width="100%" alt="language breakdown" />
 
 <br/>
 

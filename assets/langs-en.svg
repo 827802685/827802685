@@ -10,7 +10,7 @@
   <rect x="0.5" y="0.5" width="899" height="237" rx="12" fill="none" stroke="#2B3A5C"/>
 
   <text x="34" y="47" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Languages</text>
-  <text x="866" y="47" text-anchor="end" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#7C8DB0">自建仓库 · 按代码字节统计</text>
+  <text x="866" y="47" text-anchor="end" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#7C8DB0">Own repos · by code bytes</text>
 
   <g font-family="'Segoe UI',Helvetica,Arial,sans-serif">
     <rect x="34" y="83" width="10" height="10" rx="3" fill="#3178C6"/>
@@ -50,5 +50,5 @@
     <text x="866" y="176.5" text-anchor="end" font-size="13" font-weight="700" fill="#FFFFFF">0.03%</text>
   </g>
 
-  <text x="34" y="216" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#7C8DB0">统计范围：job · mini-flow · cloud-api · Hot-News · personal-ai-mail · freellmapi-cf</text>
+  <text x="34" y="216" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#7C8DB0">Scope: job · mini-flow · cloud-api · Hot-News · personal-ai-mail · freellmapi-cf</text>
 </svg>
