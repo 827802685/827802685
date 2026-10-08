@@ -13,6 +13,7 @@
 [![Blog](https://img.shields.io/badge/Blog-blog.zjkl.qzz.io-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://blog.zjkl.qzz.io)
 [![GitHub](https://img.shields.io/badge/GitHub-827802685-181717?style=flat-square&logo=github)](https://github.com/827802685)
 [![Mail](https://img.shields.io/badge/Mail-zjkl%40zjkl0426.dpdns.org-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:zjkl@zjkl0426.dpdns.org)
+[![English](https://img.shields.io/badge/README-English-8B5CF6?style=flat-square)](./README_EN.md)
 
 <img src="assets/divider.svg" width="100%" height="40" alt="" />
 
